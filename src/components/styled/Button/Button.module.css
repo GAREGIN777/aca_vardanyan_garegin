@@ -1,0 +1,37 @@
+.btn{
+    position: relative;
+    overflow: hidden;
+    border: none;
+    cursor: pointer;
+    font-weight: 600;
+    border-radius: 0.5em;
+    height: 40px;
+    color: var(--white);
+    font-size: 0.9em;
+    background: linear-gradient(119deg, #7cbbed, #2196F3);
+    min-width: 200px;
+
+
+}
+
+.btn:disabled {
+    background: #ccc; /* Gray background */
+    color: #666; /* Gray text */
+    cursor: not-allowed; /* Change cursor to not-allowed */
+    opacity: 0.6; /* Slight transparency */
+}
+
+.ripple {
+    position: absolute;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.3);
+    transform: scale(0);
+    animation: ripple 0.6s linear;
+}
+
+@keyframes ripple {
+    to {
+        transform: scale(4);
+        opacity: 0;
+    }
+}

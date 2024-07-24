@@ -1,0 +1,19 @@
+.form_input {
+    padding: 0 1em;
+    height: 40px;
+    font-size: 1rem;
+    border: 1px solid #ccc;
+    border-radius: 0.5em;
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+    width: 100%;
+}
+
+.error_input{
+    border: 1px solid #ff1e1e;
+}
+
+.form_input:focus{
+    border-color: #007bff;
+    box-shadow: 0 0 5px rgba(0, 123, 255, 0.5);
+    outline: none;
+}
