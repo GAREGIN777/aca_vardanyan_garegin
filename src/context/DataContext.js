@@ -1,6 +1,5 @@
 // DataContext.js
 import React, {createContext, useState, useEffect, useContext} from 'react';
-import {ProductsModel} from "../dbModels/ProductsModel";
 
 export const DataContext = createContext();
 
@@ -21,7 +20,7 @@ export const DataProvider = ({ children }) => {
                     const [invoiceLines,invoices, products, users] = await Promise.all([
                         invoiceLinesRes.json().then(res => res.value),
                         invoicesRes.json().then(res => res.value),
-                        productsRes.json().then(res => new ProductsModel(res.value)),
+                        productsRes.json().then(res => res.value),
                         usersRes.json().then(res => res.value)
                     ]);
 
